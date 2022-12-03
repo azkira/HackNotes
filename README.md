@@ -15,6 +15,23 @@ Cybersecurity is the body of technologies, processes and practices designed to p
 Receiver: `ncat -l [PORT] > file.ext`
 Sender: `ncat [IP] [PORT] --send-only < file.ext`
 
+### SSH
+ssh []@[] -i []
+permission too open
+`chmod 600 []`
+
+### SMB
+`smbclient -L [IP]`
+`smbclient \\\\[IP]\\\[SHARENAME]`
+##### try for write permission
+`mkdir [DIR]`
+
+##### Free root
+-bash-5.0$ ls -l /bin/bash
+-rwsr-sr-x 1 root root 1183448 Feb 25  2020 /bin/bash
+type
+`/bin/bash -p`
+
 ### SCP (Secure Copy)
 ##### Basic Syntax
 `scp [SOURCE_FILE_PATH] [DESTINATION_FILE_PATH]`
@@ -49,9 +66,18 @@ Sender: `ncat [IP] [PORT] --send-only < file.ext`
 - qazwsxedc
 - p4ssw0rd
 
-### Searching for Subdomains
-##### theHarvester
+## Searching for Subdomains
+### theHarvester
 `theHarvester --domain [DOMAIN] --limit 1000 --source all`
+
+## Misc
+
+### WPScan
+`wpscan --url [IP/URL] --api-token [TOKEN]`
+
+### Encode Base64
+the file name is base64.txt
+`cat base64.txt | base64 -d`
 
 ### Fix Kali Linux WSL ping problem
 `sudo setcap cap_net_raw+ep /usr/bin/ping`
@@ -61,3 +87,5 @@ Sender: `ncat [IP] [PORT] --send-only < file.ext`
 
 ## Learn From Walkthroughs
 - https://www.hackingarticles.in/seppuku1-vulnhub-walkthrough/ (brute forcing basic authentication)
+- https://falconspy.medium.com/infosec-prep-oscp-vulnhubwalkthrough-a09519236025 (oscp material)
+- https://offsecdeer.gitlab.io/post/vulnhub-walkthrough-dawn/ (SMB)
