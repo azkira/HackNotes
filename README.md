@@ -86,6 +86,6 @@ the file name is base64.txt
 #### Black-Box
 
 ## Learn From Walkthroughs
-- https://www.hackingarticles.in/seppuku1-vulnhub-walkthrough/ (brute forcing basic authentication)
+- https://medium.com/@bamroatbabak/seppuku-1-vulnhub-walkthrough-beea41846775 (brute forcing basic authentication)
 - https://falconspy.medium.com/infosec-prep-oscp-vulnhubwalkthrough-a09519236025 (oscp material)
 - https://offsecdeer.gitlab.io/post/vulnhub-walkthrough-dawn/ (SMB)
